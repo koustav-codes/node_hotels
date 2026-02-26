@@ -20,6 +20,20 @@ router.post('/', async (req, res) => {
 });
 
 
+router.get('/', async (req,res) => {
+  try{
+    const response = await Person.find();
+
+    res.status(200).json(response);
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+
+})
+
+
 router.get('/:workType', async (req, res) => {
   try {
     const workType = req.params.workType;
