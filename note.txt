@@ -1,0 +1,63 @@
+app.get('/about', (req, res) => {
+    const smartphone = {
+  id: "SM-2026-001",
+  brand: "Samsung",
+  model: "Galaxy S24 Ultra",
+  category: "Smartphone",
+
+  price: 129999,
+  currency: "INR",
+  discountPercentage: 10,
+  finalPrice: 116999,
+
+  stock: 45,
+  isAvailable: true,
+  warrantyYears: 1,
+
+  launchDate: "2026-01-15",
+
+  displaySize: "6.8 inch",
+  displayType: "Dynamic AMOLED 2X",
+  resolution: "3088 x 1440",
+  refreshRate: "120Hz",
+  protection: "Gorilla Glass Victus 2",
+
+  processor: "Snapdragon 8 Gen 3",
+  gpu: "Adreno 750",
+  ram: "12GB",
+  storage: "256GB",
+  expandableStorage: false,
+
+  rearCamera: "200MP + 12MP + 10MP + 10MP",
+  frontCamera: "12MP",
+  videoRecording: "8K @30fps",
+
+  batteryCapacity: "5000mAh",
+  fastCharging: "45W",
+  wirelessCharging: true,
+
+  operatingSystem: "Android 14",
+  ui: "One UI 6",
+
+  network: ["5G", "4G LTE", "WiFi 6E", "Bluetooth 5.3"],
+  simType: "Dual SIM (Nano + eSIM)",
+
+  weight: "233g",
+  dimensions: "162.3 x 79 x 8.6 mm",
+  buildMaterial: "Aluminum frame + Glass back",
+
+  colorOptions: ["Black", "Silver", "Violet", "Green"],
+
+  rating: 4.7,
+  totalReviews: 1894,
+
+  seller: "Samsung Official Store",
+  countryOfOrigin: "South Korea"
+};
+  res.send(smartphone)
+})
+
+app.post('/car', (req, res) => {
+
+  res.send('BMW Car Details Saved, Thank You!')
+})
